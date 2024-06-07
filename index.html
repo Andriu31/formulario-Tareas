@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas</title>
+    <link rel="stylesheet" href="css/diseño.css">
+</head>
+<body>
+    <h1>Gestor de Tareas</h1>
+    <form id="taskForm">
+        <label for="taskTitle">Título:</label>
+        <input type="text" id="taskTitle" name="taskTitle" placeholder="Título" required>
+        
+        <label for="taskDescription">Descripción:</label>
+        <input type="text" id="taskDescription" name="taskDescription" placeholder="Descripción" required>
+        
+        <label for="taskDueDate">Fecha de Vencimiento:</label>
+        <input type="date" id="taskDueDate" name="taskDueDate" required>
+        
+        <label for="taskPriority">Prioridad:</label>
+        <select id="taskPriority" name="taskPriority">
+            <option value="alta">Alta</option>
+            <option value="media">Media</option>
+            <option value="baja">Baja</option>
+        </select>
+        
+        <button type="submit">Añadir Tarea</button>
+    </form>
+    
+    <label for="taskSearch">Buscar por título:</label>
+    <input type="text" id="taskSearch" name="taskSearch" placeholder="Buscar por título">
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Descripción</th>
+                <th>Fecha de Vencimiento</th>
+                <th>Prioridad</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="taskList"></tbody>
+    </table>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
+
