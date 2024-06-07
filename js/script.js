@@ -57,6 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    window.deleteTask = function(button) {
+        const tr = button.parentElement.parentElement;
+        tr.remove();
+    };
+
     
 });
 
