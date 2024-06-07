@@ -62,7 +62,20 @@ document.addEventListener('DOMContentLoaded', () => {
         tr.remove();
     };
 
-    
+    function searchTasks() {
+        const filter = searchInput.value.toLowerCase();
+        const tasks = taskList.getElementsByTagName('tr');
+
+        Array.from(tasks).forEach(task => {
+            const title = task.children[0].textContent.toLowerCase();
+
+            if (title.includes(filter)) {
+                task.style.display = '';
+            } else {
+                task.style.display = 'none';
+            }
+        });
+    }
 });
 
     
